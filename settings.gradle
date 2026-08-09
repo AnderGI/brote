@@ -1,6 +1,17 @@
 println('SETTINGS FILE: This is executed during the initialization phase')
 
-rootProject.name = 'java-ddd-template'
+rootProject.name = 'brote'
+
+include ':apps-mobile-frontend'
+project(':apps-mobile-frontend').projectDir = file('apps/mobile/frontend')
+project(':apps-mobile-frontend').buildFileName = 'build.gradle'
+project(":apps-mobile-frontend").projectDir.mkdirs()
+
+include ':apps-mobile-backend'
+project(':apps-mobile-backend').projectDir = file('apps/mobile/backend')
+project(':apps-mobile-backend').buildFileName = 'build.gradle'
+project(":apps-mobile-backend").projectDir.mkdirs()
+
 
 include ':apps-backoffice-backend'
 project(':apps-backoffice-backend').projectDir = file('apps/backoffice/backend')
