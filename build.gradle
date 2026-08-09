@@ -1,6 +1,6 @@
 group = 'com.andergi'
 version = '0.0.1-SNAPSHOT'
-description = 'java-ddd-template'
+description = 'brote'
 
 tasks.register('clean', Delete) {
     delete rootProject.layout.buildDirectory
