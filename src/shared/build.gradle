@@ -1,0 +1,45 @@
+plugins {
+    id 'java'
+    id 'java-test-fixtures'
+}
+
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework:spring-context:7.0.6'
+    testFixturesImplementation("com.github.javafaker:javafaker:1.0.2")
+}
+
+sourceSets {
+    main {
+        java { srcDirs = ['main'] }
+        resources { srcDirs = ['main/resources'] }
+    }
+
+    test {
+        java { srcDirs = ['test'] }
+        resources { srcDirs = ['test/resources'] }
+    }
+
+    testFixtures {
+        java { srcDirs = ['testFixtures'] }
+        resources { srcDirs = ['testFixtures/resources'] }
+    }
+
+}
+
+
+jar {
+    enabled true
+}
+
+println('BACKOFFICE FILE: This is executed during the initialization phase')

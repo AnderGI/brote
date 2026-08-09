@@ -1,0 +1,23 @@
+println('SETTINGS FILE: This is executed during the initialization phase')
+
+rootProject.name = 'java-ddd-template'
+
+include ':apps-backoffice-backend'
+project(':apps-backoffice-backend').projectDir = file('apps/backoffice/backend')
+project(':apps-backoffice-backend').buildFileName = 'build.gradle'
+project(":apps-backoffice-backend").projectDir.mkdirs()
+
+include ':apps-backoffice-frontend'
+project(':apps-backoffice-frontend').projectDir = file('apps/backoffice/frontend')
+project(':apps-backoffice-frontend').buildFileName = 'build.gradle'
+project(":apps-backoffice-frontend").projectDir.mkdirs()
+
+include ':backoffice'
+project(':backoffice').projectDir = file('src/backoffice')
+project(':backoffice').buildFileName = 'build.gradle'
+project(":backoffice").projectDir.mkdirs()
+
+include ':shared'
+project(':shared').projectDir = file('src/shared')
+project(':shared').buildFileName = 'build.gradle'
+project(":shared").projectDir.mkdirs()

@@ -1,0 +1,52 @@
+plugins {
+    id 'java'
+    id 'java-test-fixtures'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation(project(":shared"))
+    testImplementation(platform('org.junit:junit-bom:6.0.3'))
+    testImplementation('org.junit.jupiter:junit-jupiter')
+    testImplementation('org.mockito:mockito-core:5.+')
+    testFixturesImplementation(testFixtures(project(":shared")))
+    testRuntimeOnly('org.junit.platform:junit-platform-launcher')
+
+}
+
+test {
+    useJUnitPlatform()
+}
+
+sourceSets {
+    main {
+        java { srcDirs = ['main'] }
+        resources { srcDirs = ['main/resources'] }
+    }
+
+    test {
+        java { srcDirs = ['test'] }
+        resources { srcDirs = ['test/resources'] }
+    }
+
+    testFixtures {
+        java { srcDirs = ['testFixtures'] }
+        resources { srcDirs = ['testFixtures/resources'] }
+    }
+}
+
+
+jar {
+    enabled true
+}
+
+println('BACKOFFICE FILE: This is executed during the initialization phase')
