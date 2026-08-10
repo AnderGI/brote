@@ -1,0 +1,20 @@
+plugins {
+    id 'com.android.application' version '9.3.1'
+}
+
+android {
+    namespace 'com.brote.mobile'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId 'com.brote.mobile'
+        minSdk 24
+        targetSdk 35
+        versionCode 1
+        versionName '1.0'
+    }
+}
+
+dependencies {
+    // Android/Kotlin dependencies here
+}
