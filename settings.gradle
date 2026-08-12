@@ -17,6 +17,11 @@ println('SETTINGS FILE: This is executed during the initialization phase')
 
 rootProject.name = 'brote'
 
+include ':apps-api-backend'
+project(':apps-api-backend').projectDir = file('apps/api/backend')
+project(':apps-api-backend').buildFileName = 'build.gradle'
+project(":apps-api-backend").projectDir.mkdirs()
+
 include ':apps-backoffice-backend'
 project(':apps-backoffice-backend').projectDir = file('apps/backoffice/backend')
 project(':apps-backoffice-backend').buildFileName = 'build.gradle'
