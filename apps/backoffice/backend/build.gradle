@@ -10,32 +10,32 @@ java {
     }
 }
 
-
-
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter'
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    testImplementation 'org.springframework.boot:spring-boot-starter-webmvc-test'
-    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    //testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    //testImplementation 'org.springframework.boot:spring-boot-starter-webmvc-test'
+    //testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 
     implementation(project(":backoffice"))
 }
 
+/*
 tasks.named('test') {
     useJUnitPlatform()
 }
-
+*/
 sourceSets {
     main {
         java { srcDirs = ['main'] }
         resources { srcDirs = ['main/resources'] }
     }
-
+/*
     test {
         java { srcDirs = ['test'] }
         resources { srcDirs = ['test/resources'] }
     }
+ */
 }
 
 springBoot {

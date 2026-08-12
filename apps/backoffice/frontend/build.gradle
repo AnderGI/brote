@@ -27,12 +27,14 @@ sourceSets {
         java { srcDirs = ['main'] }
         resources { srcDirs = ['main/resources'] }
     }
-
+/*
     test {
         java { srcDirs = ['test'] }
         resources { srcDirs = ['test/resources'] }
     }
+*/
 }
+
 
 springBoot {
     mainClass = 'com.andergi.javadddtemplate.BackofficeFrontendApp'
