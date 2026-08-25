@@ -6,7 +6,6 @@ import org.springframework.http.HttpStatus;
 
 class ScanProductLinearBarCodePutControllerShould extends ApplicationTestCase {
 
-
     @Test
     void scan_a_valid_linear_bar_code() throws Exception {
         this.assertRequest("PUT", "/linearBarCodes/8480017226938", HttpStatus.ACCEPTED.value());

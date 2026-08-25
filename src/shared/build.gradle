@@ -12,7 +12,8 @@ java {
 
 dependencies {
     implementation 'org.springframework:spring-context:7.0.6'
-    testFixturesImplementation("com.github.javafaker:javafaker:1.0.2")
+    // Replace JavaFaker with DataFaker
+    testFixturesImplementation("net.datafaker:datafaker:2.4.0")
 }
 
 sourceSets {
