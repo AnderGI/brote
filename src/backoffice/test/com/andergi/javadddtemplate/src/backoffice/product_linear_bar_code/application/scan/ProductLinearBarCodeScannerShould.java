@@ -6,7 +6,7 @@ import org.mockito.Mockito;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.times;
 
-class ProductLinearBarCodeScannerShould {
+final class ProductLinearBarCodeScannerShould {
 
     @Test
     void scan_a_product_line_bar() {
