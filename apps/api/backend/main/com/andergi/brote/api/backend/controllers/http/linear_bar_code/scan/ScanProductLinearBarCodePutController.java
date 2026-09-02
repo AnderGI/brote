@@ -17,7 +17,7 @@ public final class ScanProductLinearBarCodePutController {
         this.scanner = scanner;
     }
 
-    @PutMapping(path = "/linearBarCodes/{linearBarCode}")
+    @PutMapping(path = "/productLinearBarCodes/{linearBarCode}")
     public ResponseEntity  scan(@PathVariable final String linearBarCode) {
         this.scanner.scan(new ScanProductLineBarCodeQuery(linearBarCode));
         return ResponseEntity.status(HttpStatus.ACCEPTED).build();
