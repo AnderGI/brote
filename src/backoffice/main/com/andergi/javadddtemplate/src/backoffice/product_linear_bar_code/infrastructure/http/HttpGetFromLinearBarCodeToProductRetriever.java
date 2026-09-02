@@ -15,7 +15,7 @@ public final class HttpGetFromLinearBarCodeToProductRetriever implements FromLin
 
     @Override
     public void retrieve(String barCode) {
-        Object data = this.client.get().uri("https://world.openfoodfacts.net/api/v3/product/{barCode}", barCode)
+        Object data = this.client.get().uri("https://world.openfoodfacts.net/api/v3/product/{barCode}?product_type=food&cc=es&lc=es&fields=code,product_name,categories_tags,ingredients_analysis_tags,ecoscore_grade,nutriments", barCode)
                 .retrieve().body(String.class)
                 ;
     }

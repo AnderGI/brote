@@ -22,5 +22,4 @@ public final class ScanProductLinearBarCodePutController {
         this.scanner.scan(new ScanProductLineBarCodeCommand(linearBarCode));
         return ResponseEntity.status(HttpStatus.ACCEPTED).build();
     }
-
 }
