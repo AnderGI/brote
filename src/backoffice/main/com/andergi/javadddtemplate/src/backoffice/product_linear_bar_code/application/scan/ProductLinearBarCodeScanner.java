@@ -11,7 +11,7 @@ public final class ProductLinearBarCodeScanner {
         this.retriever = retriever;
     }
 
-    public final void scan(final ScanProductLineBarCodeQuery query) {
-        this.retriever.retrieve(query.barCode());
+    public void scan(final ScanProductLineBarCodeCommand command) {
+        this.retriever.retrieve(command.barCode());
     }
 }

@@ -12,7 +12,7 @@ final class ProductLinearBarCodeScannerShould {
     void scan_a_product_line_bar() {
         final FromLinearBarCodeToProductRetriever mock = Mockito.mock(FromLinearBarCodeToProductRetriever.class);
         final ProductLinearBarCodeScanner scanner = new ProductLinearBarCodeScanner(mock);
-        final ScanProductLineBarCodeQuery query = new ScanProductLineBarCodeQuery("8480017226938");
+        final ScanProductLineBarCodeCommand query = new ScanProductLineBarCodeCommand("8480017226938");
 
         scanner.scan(query);
 
