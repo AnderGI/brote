@@ -11,6 +11,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.webmvc.test.autoconfigure.AutoConfigureMockMvc;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
+import org.springframework.http.HttpStatus;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.ResultMatcher;
 
@@ -46,10 +47,10 @@ public abstract class ApplicationTestCase {
                 .andExpect(content().string(""));
     }
 
-    protected void assertRequest(String method, String endpoint, Integer expectedStatusCode) throws Exception {
+    protected void assertRequest(HttpMethod method, String endpoint, HttpStatus expectedStatusCode) throws Exception {
         mockMvc
-                .perform(request(HttpMethod.valueOf(method), endpoint))
-                .andExpect(status().is(expectedStatusCode))
+                .perform(request(method, endpoint))
+                .andExpect(status().is(expectedStatusCode.value()))
                 .andExpect(content().string(""));
     }
 }
