@@ -15,7 +15,7 @@ dependencyResolutionManagement {
 
 println('SETTINGS FILE: This is executed during the initialization phase')
 
-rootProject.name = 'brote'
+rootProject.name = 'brote-api'
 
 include ':apps-api-backend'
 project(':apps-api-backend').projectDir = file('apps/api/backend')
