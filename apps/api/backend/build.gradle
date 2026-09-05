@@ -39,12 +39,16 @@ sourceSets {
 springBoot {
     mainClass = 'com.andergi.brote.api.backend.ApiBackendApp'
 }
+
 bootJar {
-    enabled true
+    enabled = true
+    archiveBaseName.set('brote-api')
+    archiveVersion.set('0.0.1')
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 }
 
 jar {
-    enabled false
+    enabled = false
 }
 
 
