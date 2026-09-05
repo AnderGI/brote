@@ -11,13 +11,15 @@ java {
 }
 
 dependencies {
+    implementation(project(":backoffice"))
+
     implementation 'org.springframework.boot:spring-boot-starter'
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'com.bucket4j:bucket4j_jdk17-lettuce:8.19.0'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.boot:spring-boot-starter-webmvc-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 
-    implementation(project(":backoffice"))
 }
 
 
